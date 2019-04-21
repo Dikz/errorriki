@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1 - Projeto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="panel scores">
+        <div class="score">
+                <h1>Jogador</h1>
+                <h1>
+                level: {{ level }}
+                </h1>
+                <div class="life-bar">
+                    <div class="life"
+                        :style="{width: diferencaxp + '%'}"></div>
+                </div>
+                <div>{{ xp }}/{{ xpmax }} XP</div>
+        </div>
+        </div>
+        <div class="panel buttons">
+          <button @click="aumentaxp(20)" class="btn">
+          Ganhar 20 XP
+          </button>
+          <button @click="aumentaxp(50)" class="btn">
+          Ganhar 50 XP
+          </button>
+          <button @click="aumentaxp(10000)" class="btn">
+          Ganhar 10000 XP
+          </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
